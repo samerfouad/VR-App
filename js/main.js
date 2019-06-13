@@ -145,7 +145,6 @@ video.addEventListener('canplay',function(e){
 
 
 
-      
 
 
   }
