@@ -1,0 +1,25 @@
+{
+  "name": "caricature",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.16.0"
+  },
+  "description": "VR Analysis App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samerfouad/appj.git"
+  },
+  "author": "Samer Fouad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samerfouad/appj/issues"
+  },
+  "homepage": "https://github.com/samerfouad/appj#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

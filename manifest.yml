@@ -1,0 +1,13 @@
+---
+applications:
+- path: "."
+- buildpack: https://github.com/cloudfoundry/nodejs-buildpack 
+  memory: 512M
+  instances: 1
+  name: caricatureapp
+  command: node app.js
+  disk_quota: 512M
+  random-route: true
+env:
+OPTIMIZE_MEMORY: true
+NPM_CONFIG_PRODUCTION: true
