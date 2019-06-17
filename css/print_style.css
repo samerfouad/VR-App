@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+    padding: 1cm;
+    border: 5px red solid;
+    height: 256mm;
+    outline: 2cm #FFEAEA solid;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding-left: 230px;
+    padding-right: 20px;
+}
+
+#analysis
+{
+    position: absolute;
+    margin-bottom: 104px;
+    margin-left: -655px;
+    color:#1f70c1;
+    float: right;
+ 
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+
+
+
+h4 {
+    padding: 5px;
+    margin: 0px;
+    margin-left: -766px;
+}
+
+#frame{
+    position: absolute;
+    border:  5px solid #1f70c1;
+    width: 50px;
+    height: 100px;
+}
+
+#background_template {
+    margin-left: -7px;
+}
+
+#box {
+    border: 15px solid black;
+    width: 324px;
+    height: 373px;
+    position: absolute;
+    text-align: center;
+    margin-top: -659px;
+    margin-left: 123px;
+    box-shadow: 5px 10px 18px #888888;
+}

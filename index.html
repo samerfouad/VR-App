@@ -7,6 +7,7 @@
     <title>Know Me!</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
 </head>
 
 <body>
@@ -37,7 +38,15 @@
 
     <button id="clear-button">Clear</button>
 
-    <button id= "print" onclick="myFunction('photos')">Print</button>
+
+    <script src="js/print.min.js"></script>
+    <!-- <button id= "print" onclick="myFunction('photos')">Print</button> -->
+    <!-- <button id= "print" onclick="myFunction()">Print</button> -->
+    <!-- <button id= "print" onclick="loadAndPrint()">Print</button> -->
+    <button id= "print">Print</button>
+
+    <iframe src="img/print.html" height="200" width="300" style="display: none" id="hidden_frame"></iframe>
+
 
     <canvas id="canvas"></canvas>
 
@@ -47,15 +56,48 @@
         </div>
     </div>
 
+    <div id="content">
+        
+    </div>
 </div>
 
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#print").click(function(){
+
+        document.getElementById("hidden_frame").contentWindow.print();
+    });
+});
+</script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function loadAndPrint(){
+
+
+        //LOAD HTML DIV
+        // $('#content').load("C:/Users/Samer Fouad/Desktop/appj/print.html");
+
+        
+        //TEST
+        alert("dsdsdsdsdsd");
+
+        //PRINT USNG THE JS Libr.
+        printJS('content', 'html');
+    }
+
+</script> -->
 
 <script>
-function myFunction(el) {
+// function myFunction(el) {
+    
+    function myFunction() {
 
-var prtContent = document.getElementById(el);
+
 var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=400,toolbar=0,scrollbars=0,status=0');
+// var WinPrint = window.open('print.html', '', 'left=0,top=0,width=800,height=400,toolbar=0,scrollbars=0,status=0');
 WinPrint.document.write(prtContent.innerHTML);
 WinPrint.document.close();
 WinPrint.focus();
